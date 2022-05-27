@@ -1,4 +1,6 @@
-import { GET_CARS } from '../types';
+import {
+    GET_CARS, CREATE_CARS, EDIT_CARS, DELETE_CARS
+} from "../types";
 
 const initialState = {
     data: [],
@@ -27,10 +29,61 @@ const carsReducer = (state = initialState, action) => {
                 error: error
             };
                     
-        default:
+        case `${CREATE_CARS}_LOADING`:
             return {
-                ...state
-            }
+                ...state,
+                isLoading: true,
+            };
+            case `${CREATE_CARS}_FULFILLED`:
+            return {
+                ...state,
+                isLoading: false,
+            };
+            case `${CREATE_CARS}_ERROR`:
+            return {
+                ...state,
+                isLoading: false,
+                error: error,
+            };
+        
+            case `${EDIT_CARS}_LOADING`:
+            return {
+                ...state,
+                isLoading: true,
+            };
+            case `${EDIT_CARS}_FULFILLED`:
+            return {
+                ...state,
+                isLoading: false,
+            };
+            case `${EDIT_CARS}_ERROR`:
+            return {
+                ...state,
+                isLoading: false,
+                error: error,
+            };
+        
+            case `${DELETE_CARS}_LOADING`:
+            return {
+                ...state,
+                isLoading: true,
+            };
+            case `${DELETE_CARS}_FULFILLED`:
+            return {
+                ...state,
+                isLoading: false,
+            };
+            case `${DELETE_CARS}_ERROR`:
+            return {
+                ...state,
+                isLoading: false,
+                error: error,
+            };
+        
+            default:
+            return {
+                ...state,
+            };
     }
 }
 

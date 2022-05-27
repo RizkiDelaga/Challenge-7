@@ -1,7 +1,10 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
 import style from "./PaymentFlow.module.css";
-import check from '../../assets/icons/check.svg'
+import check from '../../assets/icons/check.svg';
+import Icon_Left_Arrow from '../../assets/icons/Icon_Left_Arrow.svg';
+import { Link } from "react-router-dom";
+
 
 
 function PaymentFlow() {
@@ -12,7 +15,7 @@ function PaymentFlow() {
                         <Row style={{width: "80%"}}>
                             <Col lg={6} md={6} className={`p-0 mb-4`}>
                                 <div className={`d-flex align-items-center`}>
-                                    <img src={check} alt="" height={30} className={`mx-2`} />
+                                    <Link to={'/cars'}><img src={Icon_Left_Arrow} alt="" height={30} className={`mx-2`} /></Link>
                                     <p>Tiket</p>
                                 </div>
                             </Col>

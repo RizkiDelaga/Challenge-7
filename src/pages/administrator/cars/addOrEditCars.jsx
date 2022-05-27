@@ -50,7 +50,17 @@ function AddOrEditCars() {
                                     <input type="text" className="form-control" placeholder="Nama" />
                                 </div>
                             </div>
-
+                            <div className="row">
+                                <div className="col-lg-2">
+                                    <label className="col-form-label">
+                                        <p>Kategori<span className="text-danger">*</span>
+                                        </p>
+                                    </label>
+                                </div>
+                                <div className="col-lg-5">
+                                    <input type="text" className="form-control" placeholder="Kategori" />
+                                </div>
+                            </div>
                             <div className="row">
                                 <div className="col-lg-2">
                                     <label className="col-form-label">
@@ -60,6 +70,20 @@ function AddOrEditCars() {
                                 </div>
                                 <div className="col-lg-5">
                                     <input type="text" className="form-control" placeholder="Harga" />
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-lg-2">
+                                    <label className="col-form-label">
+                                        <label>Status<span className="text-danger">*</span>
+                                        </label>
+                                    </label>
+                                </div>
+                                <div className="col-lg-5 pb-3">
+                                    <select class="form-select fs-6 text-secondary" aria-label="Default select example" style={{width: '100%'}}>
+                                        <option value={false}>False</option>
+                                        <option value={true}>True</option>
+                                    </select>
                                 </div>
                             </div>
                             <div className="row">

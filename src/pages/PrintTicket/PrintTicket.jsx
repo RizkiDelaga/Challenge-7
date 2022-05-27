@@ -38,7 +38,7 @@ function PrintTicket() {
                                 <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.13.216/build/pdf.worker.js">
                                         <div className={`${style.pdfViewer}`}>
                                             <Viewer
-                                                fileUrl={`${process.env.PUBLIC_URL}/pdf-open-parameters.pdf`}
+                                                fileUrl={`${process.env.PUBLIC_URL}/Invoice_Example.pdf`}
                                                 plugins={[defaultLayoutPluginInstance]}
                                             />
                                         </div>
